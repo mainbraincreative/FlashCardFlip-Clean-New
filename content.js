@@ -1,0 +1,1 @@
+document.addEventListener("mouseup",(function(){try{var e=window.getSelection().toString().trim();e&&chrome.runtime.sendMessage({type:"textSelected",text:e},(function(e){chrome.runtime.lastError&&console.log("Extension context refreshed - please reload the page")}))}catch(e){console.log("Selection handling error:",e)}}));
